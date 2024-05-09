@@ -1,0 +1,46 @@
+@import "#/styles/globals.module.scss";
+
+.backdrop {
+	width: 100%;
+	top: 0px;
+	position: fixed;
+	z-index: var(--z-index-nav-backdrop);
+	height: 5rem;
+
+	@media (min-width: $md) {
+		display: none;
+	}
+}
+
+.link {
+	position: fixed;
+	z-index: var(--z-index-nav-logo);
+	top: 8px;
+	left: 2rem;
+	visibility: hidden;
+
+	@media (min-width: $lg) {
+		top: 2rem;
+	}
+	@media (min-width: $xl) {
+		top: 2rem;
+		left: 3rem;
+	}
+	@media (min-width: $xxl) {
+		top: 4rem;
+		left: 5.8rem;
+	}
+
+	&:focus {
+		outline: 2px dotted;
+	}
+
+	.logo {
+		position: relative;
+		width: 5rem;
+
+		@media (min-width: $xl) {
+			width: 7.9rem;
+		}
+	}
+}

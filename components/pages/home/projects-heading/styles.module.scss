@@ -1,0 +1,59 @@
+@import "#/styles/globals.module.scss";
+
+.sectionTitle {
+	font-weight: 600;
+	line-height: 0.9;
+	font-weight: 600;
+	letter-spacing: -0.015em;
+	color: var(--ash);
+	font-size: 36px;
+	margin: auto;
+	position: relative;
+	z-index: 1;
+	margin-bottom: 5rem;
+	padding: 0px 2rem;
+
+	@media (min-width: $md) {
+		font-size: 5rem;
+		max-width: var(--mini-desktop-max-width);
+	}
+
+	@media (min-width: $xl) {
+		font-size: 6rem;
+		margin-bottom: 10rem;
+	}
+
+	@media (min-width: $xxl) {
+		margin-bottom: 15rem;
+		font-size: 8rem;
+		max-width: var(--max-width);
+	}
+
+	span {
+		display: block;
+		overflow: hidden;
+
+		span {
+			line-height: 1.1;
+			transform: translate(8rem, 4rem);
+
+			@media (min-width: $md) {
+				transform: translate(8rem, 8rem);
+			}
+
+			strong {
+				color: var(--white);
+			}
+		}
+
+		&:nth-child(2) {
+			span {
+				transform: translate(4rem, 4rem);
+
+				@media (min-width: $md) {
+					transform: translate(8rem, 8rem);
+				}
+			}
+		}
+	}
+}

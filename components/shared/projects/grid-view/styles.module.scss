@@ -1,0 +1,108 @@
+@import "#/styles/globals.module.scss";
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+
+	@media (min-width: 520px) {
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+		display: grid;
+	}
+	@media (min-width: $md) {
+		grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+		display: grid;
+	}
+	@media (min-width: $xl) {
+		grid-template-columns: repeat(auto-fill, minmax(430px, 1fr));
+	}
+
+	.box {
+		background-color: var(--lighter);
+		position: relative;
+		cursor: pointer;
+		overflow: hidden;
+		border: 0px;
+		background-color: var(--light-ash);
+		height: 140px;
+
+		@media (min-width: $md) {
+			height: 340px;
+		}
+
+		img {
+			transition: transform 200ms ease-in-out;
+			transform: scale(1.08);
+		}
+
+		.boxOverlay {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0px;
+			left: 0px;
+			will-change: background-color;
+			transition: background-color 200ms ease-in-out;
+			z-index: 2;
+			background-color: rgba(0, 0, 0, 0);
+
+			@media (min-width: $md) {
+				background-color: rgba(0, 0, 0, 0.4);
+			}
+		}
+
+		.boxCircle {
+			z-index: 3;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			opacity: 0;
+			will-change: opacity;
+			transition: opacity 200ms ease-in-out;
+			font-family: "sf-pro-regular";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 1.2rem;
+
+			@media (min-width: $md) {
+				font-size: 1.6rem;
+			}
+
+			span {
+				background-color: var(--blue);
+				color: var(--white);
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
+				width: 5rem;
+				height: 5rem;
+
+				@media (min-width: $md) {
+					width: 10rem;
+					height: 10rem;
+				}
+			}
+		}
+
+		&:hover,
+		&:focus {
+			outline: none;
+
+			.boxCircle {
+				opacity: 1;
+			}
+
+			.boxOverlay {
+				background-color: rgba(0, 0, 0, 0);
+			}
+
+			img {
+				transform: scale(1);
+			}
+		}
+	}
+}

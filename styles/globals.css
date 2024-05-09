@@ -1,0 +1,125 @@
+@font-face {
+	font-family: "sf-pro-bold";
+	src: url("/fonts/sf-pro/SFPRODISPLAYBOLD.OTF");
+	font-display: swap;
+}
+@font-face {
+	font-family: "sf-pro-medium";
+	src: url("/fonts/sf-pro/SFPRODISPLAYMEDIUM.OTF");
+	font-display: swap;
+}
+@font-face {
+	font-family: "sf-pro-regular";
+	src: url("/fonts/sf-pro/SFPRODISPLAYREGULAR.OTF");
+	font-display: swap;
+}
+
+:root {
+	/* ---------------------------------------------------- */
+	/* COLORS */
+	/* ---------------------------------------------------- */
+	--black: #000;
+	--white: #fff;
+	--light-brown: #e1dfdd;
+	--ash: #86868b;
+	--light-ash: #c0c4c91f;
+	--brown: #29231c;
+	--white-alpha: rgba(255, 255, 255, 0.1);
+	--blue: #455ce9;
+	--color-white: #ffffff;
+	--dark-blue: #2437a7;
+	--red: #ff0000;
+	--green: rgb(16, 133, 16);
+	--dark-radial-gradient: radial-gradient(farthest-side at 50% 50%, #2a2b2a, transparent);
+	--work-linear-gradient: linear-gradient(to right, rgba(255, 255, 255, 0.15), transparent);
+	--pink: #f0666b;
+	/* --blog-accent: #f0666b; */
+	--blog-accent: #455ce9;
+	--light-blue: #bddefd;
+	--white-alpha: rgba(255, 255, 255, 0.2);
+	/* --blog-accent: #1f2632; */
+
+	/* #dd6e28 */
+	/* ---------------------------------------------------- */
+	/* SIZES*/
+	/* ---------------------------------------------------- */
+	--max-width: 1280px;
+	--mini-desktop-max-width: 1024px;
+
+	/* ---------------------------------------------------- */
+	/* Z-INDECES*/
+	/* Pages are divided into various sections*/
+	/* ---------------------------------------------------- */
+	--z-index-nav-backdrop: 800;
+	--z-index-navbtn: 900;
+	--z-index-loader: 1000;
+	--z-index-nav-logo: 1003;
+	--z-index-noise: 1;
+	--z-index-banner: 1;
+	--z-index-banner-curtain: 2;
+	--z-index-content: 3;
+	--z-index-contact: 0;
+	--z-index-scroll-to-top: 500;
+	--z-index-modal: 600;
+	--z-index-backdrop: 10;
+	--z-index-app-blocker: 1000000000000000;
+}
+
+html {
+	font-size: 62.5%;
+	scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+	width: 0px;
+}
+
+*::selection {
+	background: var(--light-brown);
+	color: var(--black);
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-family: "sf-pro-regular";
+	background: var(--black);
+	scroll-behavior: smooth;
+	scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+	width: 0px;
+}
+
+.hide {
+	overflow: hidden !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "sf-pro-bold";
+}
+
+.fixed-footer {
+	position: fixed;
+	z-index: 0;
+	width: 100%;
+	bottom: 0px;
+}
+
+/* -----------------------------------------------*/
+/* GOOGLE RECAPTCHA LOGO */
+/* -----------------------------------------------*/
+.grecaptcha-badge {
+	right: -305px !important;
+	bottom: 0px !important;
+}
+.grecaptcha-badge:hover {
+	right: 0px !important;
+}
