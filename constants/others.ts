@@ -55,8 +55,18 @@ const ROLES = {
     label: "Team Lead",
     key: "teamlead",
   },
+  fs: {
+    label: "Full Stack Developer",
+    key: "fullstackdeveloper",
+  },
 };
 
-const others = { ABOUT_NOTE, CREDIT_NOTE, PROJECT_NATURE, FOCUSABLE_ELEMENT_STRING, ROLES };
+const others = {
+  ABOUT_NOTE,
+  CREDIT_NOTE,
+  PROJECT_NATURE,
+  FOCUSABLE_ELEMENT_STRING,
+  ROLES,
+};
 
 export default others;
