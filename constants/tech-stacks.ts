@@ -201,6 +201,10 @@ const TECH_STACKS = {
     key: `laravel`,
     label: `PHP - Laravel`,
   },
+  laravelApi: {
+    key: `laravel-api`,
+    label: `Laravel API's`,
+  },
   redshiftCubeJs: {
     key: `redshiftCubeJs`,
     label: `Red Shift CubeJs`,
@@ -260,6 +264,30 @@ const TECH_STACKS = {
   gitGitHubGitLabGitBucket: {
     key: `gitGitHubGitLabGitBucket`,
     label: `Git GitHub GitLab GitBucket`,
+  },
+  livewire: {
+    key: `livewire`,
+    label: `Live Wire`,
+  },
+  laradock: {
+    key: `laradock`,
+    label: `Laradock`,
+  },
+  microservices: {
+    key: `microservices`,
+    label: `Micro Services`,
+  },
+  stripe: {
+    key: `stripe`,
+    label: `Stripe`,
+  },
+  aws: {
+    key: `aws`,
+    label: `AWS (SNS - SQS - API Gateway)`,
+  },
+  ambassador: {
+    key: `ambassador`,
+    label: `Ambassador (API gateway`,
   },
 };
 
